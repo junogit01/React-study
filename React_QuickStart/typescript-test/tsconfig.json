@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/", // 빌드한 최종 결과물이 저장되는 경로
+    "allowJs": true, // 빌드 대상에 js, jsx 파일도 포함한다는 의미
+    "esModuleInterop": true, //
+    "resolveJsonModule": true, // .json 텍스트 파일을 자바스크립트 객체로 임포트 가능
+    "sourceMap": true, // 디버깅을 위한 js.amp 같은 소스맵 파일 생성
+    "noImplicitAny": true, // 타입스크립트에선 데이터 형식 미지정시 any 데이터 형식 사용하기에 그를 막기 위해 무조건 true
+    "module": "commonjs", // 컴파일 결과물이 사용하게 될 모듈 시스템 방식 지정
+    "target": "es5", // 빌드한 결과물의 형태 지정
+    "jsx": "react" // jsx가 사용된 부분을 react.createElement() 함수 호출 형태로 빌드 한다.
+  },
+  "include": ["./src/**/*"], // 파일 패턴을 지정해 빌드할 파일 지정
+  "exclude": ["node_modules", "**/*.spec.ts"] // 빌드 배재 파일 경로 대상
+}
