@@ -1,7 +1,18 @@
-import React from 'react';
+import React from "react";
+import CountryList from "./CountryList";
 
+export type CountryType = {
+  no: number;
+  country: string;
+  visited: boolean;
+};
 const App = () => {
-  let msg = '<i>World</i>';
+  const list: Array<CountryType> = [
+    { no: 1, country: "이집트", visited: false },
+    { no: 2, country: "일본", visited: true },
+    { no: 3, country: "피지", visited: false },
+    { no: 4, country: "콜롬비아", visited: false },
+  ];
 
   const addResult = (x: number, y: number) => {
     return (
@@ -12,9 +23,10 @@ const App = () => {
   };
   return (
     <div className="container">
-      <h1>Hello {msg}!</h1>
+      <h1>Hello !</h1>
       <hr className="dash-style" />
       {addResult(4, 3)}
+      <CountryList countries={list} />
     </div>
   );
 };
