@@ -1,6 +1,5 @@
-import React from "react";
-import { CountryType } from "./App";
-import CountryItem from "./CountryItem";
+import {CountryType} from './App';
+import CountryItem from './CountryItem';
 
 type CountryListPropsType = {
   countries: Array<CountryType>;
